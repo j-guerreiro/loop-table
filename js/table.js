@@ -18,4 +18,19 @@ const csvContent = dataArray.map(row => row.join(',')).join('\n');
 
 console.log(csvContent); // Output the CSV data to the console
 
-// If you want to save the CSV data to a file, you can use the File System API (Node.js) or the Blob API (browser).
+// Display on the markup the table csv data from the table.
+const currentDiv = document.getElementById('table-output-preview');
+const newContent = document.createTextNode(csvContent);
+currentDiv.appendChild(newContent);
+
+const blob = new Blob([csvContent], { type: 'csv/text' });
+const fileUrl = URL.createObjectURL(blob);
+console.log(fileUrl);
+
+const downloadButton = document.getElementById('download-file');
+downloadButton.setAttribute('href', fileUrl);
+
+downloadButton.addEventListener('click', e => {
+
+});
+

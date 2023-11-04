@@ -8,6 +8,7 @@
 }
 
 h1,
+h2,
 blockquote,
 p {
   text-align: center;
@@ -15,6 +16,7 @@ p {
 
 table {
   border-collapse: collapse;
+  margin: 35px 0;
   width: 100%;
 }
 
@@ -26,4 +28,32 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+#table-output-preview {
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 15px;
+  width: fit-content;
+}
+
+.download-button {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.download-button a {
+  text-decoration: none;
+  border: 1px solid greenyellow;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgb(106, 106, 118);
+  color: aliceblue;
+}
+
+.download-button a:hover {
+  background-color: aquamarine;
+  color: blueviolet;
+  transition: ease-in-out 0.2s;
 }
