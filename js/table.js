@@ -25,12 +25,6 @@ currentDiv.appendChild(newContent);
 
 const blob = new Blob([csvContent], { type: 'csv/text' });
 const fileUrl = URL.createObjectURL(blob);
-console.log(fileUrl);
-
 const downloadButton = document.getElementById('download-file');
 downloadButton.setAttribute('href', fileUrl);
-
-downloadButton.addEventListener('click', e => {
-
-});
 
